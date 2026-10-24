@@ -4,17 +4,17 @@ const initialProjects = [
     {
         title: "Inventory Management System",
         description: "A project to manage products, sales and inventory.",
-        link: "https://github.com/yourusername/project-one"
+        link: "https://github.com/myusername/project-one"
     },
     {
         title: "Student Management System",
         description: "A simple system to organize student information.",
-        link: "https://github.com/yourusername/project-two"
+        link: "https://github.com/myusername/project-two"
     },
     {
         title: "Personal Portfolio Website",
         description: "My portfolio built with HTML, CSS, Bootstrap and JavaScript.",
-        link: "https://github.com/yourusername/project-three"
+        link: "https://github.com/myusername/project-three"
     }
 ];
 
