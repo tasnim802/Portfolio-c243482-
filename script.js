@@ -1,4 +1,3 @@
-
 const OWNER_PASSWORD = "123jesi";
 
 const initialProjects = [
@@ -19,17 +18,16 @@ const initialProjects = [
     }
 ];
 
-let projects;
+let projects = initialProjects;
 
 try {
-    const saved = localStorage.getItem("myProjects");
-    projects = saved === null ? initialProjects : JSON.parse(saved);
-
-    if (!Array.isArray(projects)) projects = initialProjects;
+    const saved = JSON.parse(localStorage.getItem("myProjects"));
+    if (Array.isArray(saved)) projects = saved;
 } catch {
     projects = initialProjects;
 }
 
+// Display projects
 function displayProjects() {
     const list = document.getElementById("projectList");
     list.replaceChildren();
@@ -61,23 +59,23 @@ function displayProjects() {
     });
 }
 
+// Owner login
 function login() {
     if (prompt("Enter owner password:") === OWNER_PASSWORD) {
         document.getElementById("ownerPanel").hidden = false;
         document.getElementById("ownerLoginBtn").hidden = true;
-        alert("Owner mode enabled.");
     } else {
         alert("Incorrect password.");
     }
 }
 
-
+// Owner logout
 function logout() {
     document.getElementById("ownerPanel").hidden = true;
     document.getElementById("ownerLoginBtn").hidden = false;
 }
 
-// Add and save a project
+// Add a new project
 document.getElementById("projectForm").addEventListener("submit", function (e) {
     e.preventDefault();
 
@@ -91,25 +89,19 @@ document.getElementById("projectForm").addEventListener("submit", function (e) {
     }
 
     projects.push({ title, description, link });
-
-    try {
-        localStorage.setItem("myProjects", JSON.stringify(projects));
-    } catch {
-        projects.pop();
-        alert("Could not save the project in this browser.");
-        return;
-    }
+    localStorage.setItem("myProjects", JSON.stringify(projects));
 
     displayProjects();
     this.reset();
     alert("Project added!");
 });
 
-
+// Contact form demo
 document.getElementById("contactForm").addEventListener("submit", function (e) {
     e.preventDefault();
     alert("Thank you! This is a demo form; your message was not emailed.");
     this.reset();
 });
 
+// Show projects when the page loads
 displayProjects();
