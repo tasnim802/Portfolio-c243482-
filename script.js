@@ -27,7 +27,7 @@ try {
     projects = initialProjects;
 }
 
-// Display projects
+
 function displayProjects() {
     const list = document.getElementById("projectList");
     list.replaceChildren();
@@ -59,7 +59,7 @@ function displayProjects() {
     });
 }
 
-// Owner login
+
 function login() {
     if (prompt("Enter owner password:") === OWNER_PASSWORD) {
         document.getElementById("ownerPanel").hidden = false;
@@ -69,13 +69,13 @@ function login() {
     }
 }
 
-// Owner logout
+
 function logout() {
     document.getElementById("ownerPanel").hidden = true;
     document.getElementById("ownerLoginBtn").hidden = false;
 }
 
-// Add a new project
+
 document.getElementById("projectForm").addEventListener("submit", function (e) {
     e.preventDefault();
 
@@ -96,12 +96,12 @@ document.getElementById("projectForm").addEventListener("submit", function (e) {
     alert("Project added!");
 });
 
-// Contact form demo
+
 document.getElementById("contactForm").addEventListener("submit", function (e) {
     e.preventDefault();
     alert("Thank you! This is a demo form; your message was not emailed.");
     this.reset();
 });
 
-// Show projects when the page loads
+
 displayProjects();
