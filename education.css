@@ -1,0 +1,239 @@
+:root {
+    --purple: #49345F;
+    --dark-purple: #342441;
+    --light-purple: #E8DDF0;
+    --beige: #F3EBDD;
+    --cream: #FFFCF6;
+    --text: #39313D;
+    --muted: #716879;
+    --border: #E2D5E8;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--cream);
+    color: var(--text);
+    font-family: Arial, sans-serif;
+    line-height: 1.7;
+}
+
+/* NAVBAR */
+
+.navbar {
+    background: var(--dark-purple);
+}
+
+.navbar-brand {
+    font-weight: 800;
+}
+
+.nav-link {
+    color: white !important;
+}
+
+.nav-link:hover {
+    color: var(--light-purple) !important;
+}
+
+
+/* HEADER */
+
+.education-header {
+    background: linear-gradient(
+        120deg,
+        var(--beige),
+        var(--cream)
+    );
+
+    padding: 75px 0;
+    text-align: center;
+}
+
+.eyebrow {
+    color: #9275A8;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.education-header h1 {
+    color: var(--purple);
+    font-size: 42px;
+    font-weight: 800;
+}
+
+.education-header p:last-child {
+    color: var(--muted);
+}
+
+
+/* EDUCATION CONTAINER */
+
+.education-container {
+    padding-top: 55px;
+    padding-bottom: 55px;
+}
+
+
+/* EDUCATION CARD */
+
+.education-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 25px;
+
+    background: white;
+
+    border: 1px solid var(--border);
+    border-radius: 15px;
+
+    padding: 30px;
+    margin-bottom: 25px;
+
+    box-shadow: 0 8px 25px #34244108;
+
+    transition: transform .25s;
+}
+
+.education-item:hover {
+    transform: translateY(-4px);
+}
+
+
+/* LOGO */
+
+.education-logo {
+    width: 90px;
+    height: 90px;
+
+    min-width: 90px;
+
+    background: var(--light-purple);
+
+    border-radius: 15px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.education-logo img {
+    width: 75px;
+    height: 75px;
+    object-fit: contain;
+}
+
+.education-icon {
+    font-size: 40px;
+}
+
+
+/* TEXT */
+
+.education-level {
+    display: inline-block;
+
+    background: var(--light-purple);
+    color: var(--purple);
+
+    border-radius: 20px;
+
+    padding: 5px 13px;
+
+    font-size: 11px;
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 12px;
+}
+
+.education-content h2 {
+    color: var(--purple);
+    font-size: 21px;
+    font-weight: 800;
+}
+
+.education-content h3 {
+    color: var(--text);
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.education-content p {
+    color: var(--muted);
+    margin-bottom: 8px;
+}
+
+
+/* BACK BUTTON */
+
+.back-home {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.btn-main {
+    background: var(--purple);
+    color: white;
+    border: 1px solid var(--purple);
+    padding: 10px 20px;
+}
+
+.btn-main:hover {
+    background: var(--dark-purple);
+    color: white;
+}
+
+
+/* FOOTER */
+
+footer {
+    background: var(--dark-purple);
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+footer p {
+    margin: 0;
+}
+
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 600px) {
+
+    .education-header {
+        padding: 50px 0;
+    }
+
+    .education-header h1 {
+        font-size: 32px;
+    }
+
+    .education-item {
+        flex-direction: column;
+        padding: 22px;
+        gap: 18px;
+    }
+
+    .education-logo {
+        width: 70px;
+        height: 70px;
+        min-width: 70px;
+    }
+
+    .education-logo img {
+        width: 55px;
+        height: 55px;
+    }
+
+    .education-content h2 {
+        font-size: 18px;
+    }
+
+}
