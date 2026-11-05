@@ -3,141 +3,640 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="theme-color" content="#342441">
+    <meta name="description" content="Sadia Tasnim's personal portfolio">
+    <title>Sadia Tasnim | Portfolio</title>
 
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-   
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 <body>
+
+<!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
     <div class="container">
-        <a class="navbar-brand" href="#home">My Portfolio</a>
-        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+        <a class="navbar-brand" href="#home">Sadia Tasnim<span class="brand-dot">.</span></a>
+
+        <div class="d-flex align-items-center gap-2">
+            <select id="themeSelect" class="form-select form-select-sm theme-select">
+                <option value="system">System</option>
+                <option value="light">Light</option>
+                <option value="dark">Dark</option>
+            </select>
+
+            <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse" data-bs-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+
         <div class="collapse navbar-collapse" id="menu">
             <ul class="navbar-nav ms-auto">
                 <li><a class="nav-link" href="#about">About</a></li>
                 <li><a class="nav-link" href="#skills">Skills</a></li>
                 <li><a class="nav-link" href="#projects">Projects</a></li>
-                <li><a class="nav-link" href="#education">Education</a></li>
-                <li><a class="nav-link" href="#activities">Activities</a></li>
+                <li><a class="nav-link" href="#research">Research</a></li>
+                <li><a class="nav-link" href="#experience">Experience</a></li>
+                <li><a class="nav-link" href="education.html">Education</a></li>
+                <li><a class="nav-link" href="#certifications">Certificates</a></li>
                 <li><a class="nav-link" href="#contact">Contact</a></li>
             </ul>
         </div>
     </div>
 </nav>
 
-<header id="home" class="text-center">
-    <img src="image/my-photo (2).JPG" alt="My Profile Photo" class="profile-img">
-    <h1>Sadia Tasnim</h1>
-    <h4>CSE Student | Entrepreneur</h4>
-    <p>Welcome to my personal portfolio!</p>
-    <a href="#projects" class="btn btn-main">Explore My Projects</a>
+<!-- HERO SECTION -->
+<header id="home" class="hero-section">
+    <div class="container hero-grid">
+
+        <div class="hero-copy">
+            <p class="eyebrow">PERSONAL PORTFOLIO</p>
+
+            <h1>Hi, I'm <span>Sadia Tasnim.</span></h1>
+
+            <h2>Computer Science Student · Entrepreneur</h2>
+
+            <p class="hero-description">
+                I enjoy building practical digital solutions, exploring data
+                and research, and learning how technology and creativity
+                can create value.
+            </p>
+
+            <div class="hero-actions">
+                <a href="#projects" class="btn btn-main">Explore My Work</a>
+                <a href="#contact" class="btn btn-outline-main">Get in Touch</a>
+                <a href="cv/Sadia-Tasnim-CV.pdf" class="btn btn-quiet"
+                   target="_blank">View CV ↗</a>
+            </div>
+
+            <div class="hero-tags">
+                <span>Software Development</span>
+                <span>Data & Research</span>
+                <span>Digital Marketing</span>
+            </div>
+        </div>
+
+        <div class="hero-photo-wrap">
+            <img id="profileImage"
+                 src="image/my-photo (2).JPG"
+                 alt="Sadia Tasnim"
+                 class="profile-img">
+
+            <div class="profile-actions">
+                <label for="photoInput" class="btn btn-outline-main btn-sm">
+                    Change Photo
+                </label>
+
+                <input type="file" id="photoInput" accept="image/*" hidden>
+
+                <button id="resetPhotoBtn"
+                        class="btn btn-sm btn-outline-secondary">
+                    Reset
+                </button>
+            </div>
+        </div>
+
+    </div>
 </header>
 
+<main>
+
+<!-- ABOUT ME -->
 <section id="about" class="container section">
-    <h2>About Me</h2>
-    <p>I am a CSE student interested in technology, entrepreneurship and communication. Alongside my studies, I manage my own business, participate in extracurricular activities, and have experience hosting a radio program at Bangladesh Betar . I enjoy learning new skills and exploring creative opportunities.</p>
+    <div class="section-heading">
+        <p class="eyebrow">A LITTLE INTRODUCTION</p>
+        <h2>About Me</h2>
+    </div>
+
+    <div class="about-panel">
+        <p>
+            I am a Computer Science and Engineering student interested
+            in technology, entrepreneurship and communication.
+            Alongside my studies, I manage my own business, take part
+            in extracurricular activities, and have experience hosting
+            an educational radio program at Bangladesh Betar.
+        </p>
+
+        <p class="mb-0">
+            My current interests include software development,
+            data analysis, research and digital marketing.
+            I am continuously working to strengthen my technical
+            foundation through practical projects and independent learning.
+        </p>
+    </div>
 </section>
 
+<!-- AREAS OF INTEREST -->
+<section id="focus" class="container section compact-section">
+    <div class="section-heading">
+        <p class="eyebrow">WHAT I'M EXPLORING</p>
+        <h2>Areas of Interest</h2>
+    </div>
+
+    <div class="row g-3">
+
+        <div class="col-md-4">
+            <article class="focus-card">
+                <span class="focus-icon">⌘</span>
+                <h3>Technology</h3>
+                <p>Web development, programming and building useful software solutions.</p>
+            </article>
+        </div>
+
+        <div class="col-md-4">
+            <article class="focus-card">
+                <span class="focus-icon">⌁</span>
+                <h3>Data & Research</h3>
+                <p>Data analysis, machine learning concepts and research-driven problem solving.</p>
+            </article>
+        </div>
+
+        <div class="col-md-4">
+            <article class="focus-card">
+                <span class="focus-icon">✳</span>
+                <h3>Digital Marketing</h3>
+                <p>Content planning, social media management and digital brand growth.</p>
+            </article>
+        </div>
+
+    </div>
+</section>
+
+<!-- SKILLS -->
 <section id="skills" class="container section">
-    <h2 class="text-center">My Skills</h2>
+    <div class="section-heading">
+        <p class="eyebrow">TOOLS & CAPABILITIES</p>
+        <h2>Skills</h2>
+    </div>
+
+    <h3 class="skill-heading">Programming & Web Development</h3>
+
     <div class="row g-3 text-center">
-        <div class="col-6 col-md-3"><div class="card skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML"><p>HTML</p></div></div>
-        <div class="col-6 col-md-3"><div class="card skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS"><p>CSS</p></div></div>
-        <div class="col-6 col-md-3"><div class="card skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap"><p>Bootstrap</p></div></div>
-        <div class="col-6 col-md-3"><div class="card skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript"><p>JavaScript</p></div></div>
-        <div class="col-6 col-md-3"><div class="card skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"><p>Python</p></div></div>
-        <div class="col-6 col-md-3"><div class="card skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++"><p>C++</p></div></div>
-        <div class="col-6 col-md-3"><div class="card skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/microsoftsqlserver/microsoftsqlserver-original.svg"
-                alt="Excel"><p>Excel</p></div></div>
-        <div class="col-6 col-md-3"><div class="card skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"alt="SQL"><p>SQL</p></div></div>
-</section>
 
-<section id="projects" class="container section">
-    <h2 class="text-center">My Projects</h2>
-    <div id="projectList" class="row g-3"></div>
-
-    <div id="ownerPanel" class="card p-4 mt-4" hidden>
-        <h4>Add a Project</h4>
-        <form id="projectForm">
-            <input id="pTitle" class="form-control mb-2" placeholder="Project name" required>
-            <textarea id="pDescription" class="form-control mb-2" placeholder="Project description" required></textarea>
-            <input id="pLink" type="url" class="form-control mb-3" placeholder="https://..." required>
-            <button class="btn btn-main">Save Project</button>
-            <button type="button" class="btn btn-secondary" onclick="logout()">Finish Editing</button>
-        </form>
-    </div>
-</section>
-
-<section id="education" class="container section">
-    <h2>Education</h2>
-    <div class="card education-card">
-        <img src="https://www.iiuc.ac.bd/assets/logo-Bkv-wivQ.webp" alt="University logo">
-        <div>
-            <h5>BSc in Computer Science and Engineering</h5>
-            <p>International Islamic University Chittagong | 2028</p>
-        </div>
-    </div>
-</section>
-
-<section id="activities" class="container section">
-    <h2 class="text-center">Beyond Academics</h2>
-    <div class="row g-4">
-        <div class="col-md-4">
-            <div class="card activity">
-                <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=700&q=80" alt="Business">
-                <div class="p-3">
-                    <h5>Entrepreneurship</h5>
-                    <p>Running my own business named "Glammate" and learning about customer relations and business management.</p>
-                </div>
+        <div class="col-6 col-md-3">
+            <div class="card skill">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML">
+                <p>HTML</p>
             </div>
         </div>
-        <div class="col-md-4">
-            <div class="card activity">
-                <img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=700&q=80" alt="Radio studio">
-                <div class="p-3">
-                    <h5>Radio Broadcasting</h5>
-                    <p>Experience hosting a educational radio program name "Sikkhangon" at Bangladesh Betar Radio-88.8 and connecting with listeners.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card activity">
-                <img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?auto=format&fit=crop&w=700&q=80" alt="Extracurricular activity">
-                <div class="p-3">
-                    <h5>Extracurricular Activities</h5>
-                    <p>Taking part in activities in "Bangladesh Red Crescent Society(RCS)" that encourage teamwork, creativity and leadership.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 
-<section id="contact" class="container section">
-    <h2>Contact Me</h2>
-    <p>Email: tasnims403@gmail.com</p>
-    <p>
-        <a href="https://github.com/tasnim802" target="_blank" rel="noopener">GitHub</a> |
-        <a href="https://www.linkedin.com/in/tasnim-jesika-2942ab218?utm_source=share_via" target="_blank" rel="noopener">LinkedIn</a>
+        <div class="col-6 col-md-3">
+            <div class="card skill">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS">
+                <p>CSS</p>
+            </div>
+        </div>
+
+        <div class="col-6 col-md-3">
+            <div class="card skill">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap">
+                <p>Bootstrap</p>
+            </div>
+        </div>
+
+        <div class="col-6 col-md-3">
+            <div class="card skill">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
+                <p>JavaScript</p>
+            </div>
+        </div>
+
+        <div class="col-6 col-md-3">
+            <div class="card skill">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+                <p>Python</p>
+            </div>
+        </div>
+
+        <div class="col-6 col-md-3">
+            <div class="card skill">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++">
+                <p>C++</p>
+            </div>
+        </div>
+
+        <div class="col-6 col-md-3">
+            <div class="card skill">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL">
+                <p>MySQL</p>
+            </div>
+        </div>
+
+    </div>
+
+    <h3 class="skill-heading mt-4">Data & Productivity</h3>
+
+    <div class="row g-3 text-center">
+
+        <div class="col-6 col-md-3">
+            <div class="card skill">
+                <span class="skill-symbol">▦</span>
+                <p>Microsoft Excel</p>
+            </div>
+        </div>
+
+        <div class="col-6 col-md-3">
+            <div class="card skill">
+                <span class="skill-symbol">▥</span>
+                <p>Data Analysis</p>
+            </div>
+        </div>
+
+    
+    </div>
+
+    <!-- DIGITAL MARKETING -->
+    <h3 class="skill-heading mt-4">Digital Marketing & Tools</h3>
+
+    <div class="row g-3 text-center">
+
+        <div class="col-6 col-md-3">
+            <div class="card skill">
+                <img src="https://cdn.simpleicons.org/meta/0866FF" alt="Meta">
+                <p>Meta Business Suite</p>
+            </div>
+        </div>
+
+        <div class="col-6 col-md-3">
+            <div class="card skill">
+                <img src="https://cdn.simpleicons.org/meta/0866FF" alt="Meta">
+                <p>Meta Ads Manager</p>
+            </div>
+        </div>
+
+        <div class="col-6 col-md-3">
+            <div class="card skill">
+                <img src="https://cdn.simpleicons.org/facebook/0866FF" alt="Facebook">
+                <p>Facebook Marketing</p>
+            </div>
+        </div>
+
+        <div class="col-6 col-md-3">
+            <div class="card skill">
+                <img src="https://cdn.simpleicons.org/canva/00C4CC" alt="Canva">
+                <p>Canva</p>
+            </div>
+        </div>
+
+        <div class="col-6 col-md-3">
+            <div class="card skill">
+                <img src="https://cdn.simpleicons.org/googleanalytics/F9AB00" alt="Google Analytics">
+                <p>Google Analytics</p>
+            </div>
+        </div>
+
+        <div class="col-6 col-md-3">
+            <div class="card skill">
+                <img src="https://cdn.simpleicons.org/googleads/4285F4" alt="Google Ads">
+                <p>Google Ads</p>
+            </div>
+        </div>
+
+    </div>
+
+    <p class="small-note mt-3">
+        Only list skills you can confidently explain or demonstrate.
     </p>
-    <form id="contactForm">
-        <input class="form-control mb-2" placeholder="Your name" required>
-        <input type="email" class="form-control mb-2" placeholder="Your email" required>
-        <textarea class="form-control mb-2" placeholder="Your message" required></textarea>
-        <button class="btn btn-main">Send Message</button>
-    </form>
 </section>
 
+<!-- PROJECTS -->
+<section id="projects" class="container section">
+    <div class="section-heading">
+        <p class="eyebrow">SELECTED WORK</p>
+        <h2>Projects</h2>
+        <p>Practical work that reflects what I am learning and building.</p>
+    </div>
+
+    <div id="projectList" class="row g-3"></div>
+    <p id="projectEmpty" class="empty-note" hidden>No projects added yet.</p>
+</section>
+
+<!-- RESEARCH -->
+<section id="research" class="container section soft-section">
+    <div class="section-heading">
+        <p class="eyebrow">ACADEMIC EXPLORATION</p>
+        <h2>Research</h2>
+        <p>Research interests, ongoing work and publications.</p>
+    </div>
+
+    <div id="researchList" class="row g-3"></div>
+    <p id="researchEmpty" class="empty-note">Research updates will be added here.</p>
+</section>
+<!-- EXPERIENCE -->
+<section id="experience" class="container section">
+
+    <div class="section-heading">
+        <p class="eyebrow">PRACTICAL EXPERIENCE</p>
+        <h2>Experience & Activities</h2>
+    </div>
+
+    <div class="experience-card">
+
+        <div class="experience-icon">
+            <i class="bi bi-shop"></i>
+        </div>
+
+        <div class="experience-content">
+
+            <h3>Entrepreneurship</h3>
+
+            <h4>Founder & Owner of Glamette</h4>
+
+            <span class="experience-type">
+                Online Fashion & Lifestyle Business
+            </span>
+
+            <p>
+                Founded and managed Glamette, an online fashion and
+                lifestyle business offering carefully selected products
+                such as accessories, beauty items, and fashion essentials.
+                Responsible for product selection, page management,
+                content creation, customer communication, order handling,
+                and promotional activities.
+            </p>
+
+            <p>
+                Through this experience, I have developed practical skills
+                in digital marketing, brand management, customer relationship
+                management, and online business operations.
+            </p>
+
+            <div class="experience-skills">
+                <span>Entrepreneurship</span>
+                <span>Digital Marketing</span>
+                <span>Content Creation</span>
+                <span>Brand Management</span>
+                <span>Customer Relationship</span>
+            </div>
+
+            <a href=" https://www.facebook.com/share/19tXRrQK8n/?mibextid=wwXIfr" target="_blank"
+               class="experience-link">
+                Explore My Business <i class="bi bi-arrow-up-right"></i>
+            </a>
+
+        </div>
+    </div>
+
+</section>
+
+<!-- EDUCATION -->
+<section id="education" class="container section">
+    <div class="section-heading">
+        <p class="eyebrow">ACADEMIC BACKGROUND</p>
+        <h2>Education</h2>
+    </div>
+
+    <div class="card education-card">
+        <img src="https://www.iiuc.ac.bd/assets/logo-Bkv-wivQ.webp"
+             alt="IIUC Logo">
+
+        <div>
+            <h3>BSc in Computer Science and Engineering</h3>
+            <p>International Islamic University Chittagong</p>
+            <p>Expected Graduation: 2028</p>
+        </div>
+    </div>
+
+    <a href="education.html" class="btn btn-outline-main mt-3">
+        View Full Education Details →
+    </a>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section id="certifications" class="container section">
+    <div class="section-heading">
+        <p class="eyebrow">CONTINUOUS LEARNING</p>
+        <h2>Certifications & Courses</h2>
+    </div>
+
+    <div id="certificateList" class="row g-3"></div>
+
+    <p id="certificateEmpty" class="empty-note">
+        Certificates and courses will appear here as they are added.
+    </p>
+</section>
+
+<!-- ACTIVITIES -->
+<section id="activities" class="container section soft-section">
+
+        <div class="col-md-4">
+            <div class="card activity">
+                <img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?auto=format&fit=crop&w=700&q=80"
+                     alt="Community Activities">
+
+                <div class="p-3">
+                    <h3>Community Activities</h3>
+                    <p>
+                        Taking part in activities with Bangladesh Red Crescent
+                        Society, developing teamwork and leadership.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="container section contact-section">
+    <div class="contact-panel">
+
+        <p class="eyebrow">LET'S CONNECT</p>
+        <h2>Have a project or opportunity in mind?</h2>
+
+        <p>
+            Feel free to reach out for collaboration,
+            learning opportunities or professional connections.
+        </p>
+
+        <p>
+            Email:
+            <a href="mailto:tasnims403@gmail.com">tasnims403@gmail.com</a>
+        </p>
+
+        <div class="social-links">
+            <a href="https://github.com/tasnim802" target="_blank">GitHub ↗</a>
+            <a href="https://www.linkedin.com/in/tasnim-jesika-2942ab218/"
+               target="_blank">LinkedIn ↗</a>
+        </div>
+
+        <form id="contactForm" class="mt-4">
+            <input class="form-control mb-2"
+                   name="name" placeholder="Your name" required>
+
+            <input type="email" class="form-control mb-2"
+                   name="email" placeholder="Your email" required>
+
+            <textarea class="form-control mb-2"
+                      name="message" placeholder="Your message" required></textarea>
+
+            <button class="btn btn-main" type="submit">Send Message</button>
+        </form>
+
+        <p class="small-note mt-2">
+            Demo form only. It does not send emails yet.
+        </p>
+
+    </div>
+</section>
+
+<!-- OWNER DASHBOARD -->
+<section id="ownerPanel" class="container section" hidden>
+
+    <div class="owner-heading">
+        <div>
+            <p class="eyebrow">PRIVATE EDITING AREA</p>
+            <h2>Owner Dashboard</h2>
+            <p>Manage portfolio entries saved in this browser.</p>
+        </div>
+
+        <button type="button" class="btn btn-outline-secondary"
+                id="logoutBtn">Finish Editing</button>
+    </div>
+
+    <div class="row g-4">
+
+        <!-- PROJECT FORM -->
+        <div class="col-lg-6">
+            <div class="card dashboard-card">
+                <h3 id="projectFormHeading">Add a Project</h3>
+
+                <form id="projectForm">
+                    <input type="hidden" id="projectEditIndex" value="-1">
+
+                    <label class="form-label" for="pTitle">Project Name</label>
+                    <input id="pTitle" class="form-control mb-2" required>
+
+                    <label class="form-label" for="pDescription">Description</label>
+                    <textarea id="pDescription" class="form-control mb-2" required></textarea>
+
+                    <label class="form-label" for="pTech">Technologies</label>
+                    <input id="pTech" class="form-control mb-2">
+
+                    <label class="form-label" for="pLink">Project URL</label>
+                    <input id="pLink" type="url" class="form-control mb-3" required>
+
+                    <button class="btn btn-main" type="submit">Save Project</button>
+                    <button class="btn btn-outline-secondary" type="button"
+                            id="cancelProjectEdit" hidden>Cancel</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- RESEARCH FORM -->
+        <div class="col-lg-6">
+            <div class="card dashboard-card">
+                <h3 id="researchFormHeading">Add Research</h3>
+
+                <form id="researchForm">
+                    <input type="hidden" id="researchEditIndex" value="-1">
+
+                    <label class="form-label" for="rTitle">Research Title</label>
+                    <input id="rTitle" class="form-control mb-2" required>
+
+                    <label class="form-label" for="rArea">Research Area</label>
+                    <input id="rArea" class="form-control mb-2" required>
+
+                    <label class="form-label" for="rDescription">Description</label>
+                    <textarea id="rDescription" class="form-control mb-2" required></textarea>
+
+                    <label class="form-label" for="rStatus">Status</label>
+                    <select id="rStatus" class="form-select mb-2">
+                        <option>Planning</option>
+                        <option>Ongoing</option>
+                        <option>Completed</option>
+                        <option>Published</option>
+                    </select>
+
+                    <label class="form-label" for="rLink">Paper Link</label>
+                    <input id="rLink" type="url" class="form-control mb-3">
+
+                    <button class="btn btn-main" type="submit">Save Research</button>
+                    <button class="btn btn-outline-secondary" type="button"
+                            id="cancelResearchEdit" hidden>Cancel</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- EXPERIENCE FORM -->
+        <div class="col-lg-6">
+            <div class="card dashboard-card">
+                <h3 id="experienceFormHeading">Add Experience</h3>
+
+                <form id="experienceForm">
+                    <input type="hidden" id="experienceEditIndex" value="-1">
+
+                    <label class="form-label" for="eRole">Role / Activity</label>
+                    <input id="eRole" class="form-control mb-2" required>
+
+                    <label class="form-label" for="ePlace">Organization</label>
+                    <input id="ePlace" class="form-control mb-2" required>
+
+                    <label class="form-label" for="ePeriod">Period</label>
+                    <input id="ePeriod" class="form-control mb-2">
+
+                    <label class="form-label" for="eDescription">Description</label>
+                    <textarea id="eDescription" class="form-control mb-3" required></textarea>
+
+                    <button class="btn btn-main" type="submit">Save Experience</button>
+                    <button class="btn btn-outline-secondary" type="button"
+                            id="cancelExperienceEdit" hidden>Cancel</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- CERTIFICATE FORM -->
+        <div class="col-lg-6">
+            <div class="card dashboard-card">
+                <h3 id="certificateFormHeading">Add Certificate / Course</h3>
+
+                <form id="certificateForm">
+                    <input type="hidden" id="certificateEditIndex" value="-1">
+
+                    <label class="form-label" for="cName">Course Name</label>
+                    <input id="cName" class="form-control mb-2" required>
+
+                    <label class="form-label" for="cIssuer">Issuing Organization</label>
+                    <input id="cIssuer" class="form-control mb-2" required>
+
+                    <label class="form-label" for="cDate">Completion Date</label>
+                    <input id="cDate" class="form-control mb-2">
+
+                    <label class="form-label" for="cLink">Credential Link</label>
+                    <input id="cLink" type="url" class="form-control mb-3">
+
+                    <button class="btn btn-main" type="submit">Save Certificate</button>
+                    <button class="btn btn-outline-secondary" type="button"
+                            id="cancelCertificateEdit" hidden>Cancel</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+    <p class="small-note dashboard-warning mt-4">
+        This is a browser-only demo dashboard. It is not secure authentication.
+        Changes are saved only in this browser. A real public admin dashboard
+        needs backend authentication and a database.
+    </p>
+</section>
+
+</main>
+
+<!-- FOOTER -->
 <footer class="text-center">
     <p>© 2026 Sadia Tasnim | Personal Portfolio</p>
     <a href="#home">Back to top ↑</a>
-    <button id="ownerLoginBtn" class="btn btn-sm btn-outline-light ms-2" onclick="login()">Owner Login</button>
+
+    <button id="ownerLoginBtn" class="btn btn-sm btn-outline-light ms-2"
+            type="button">Owner Login</button>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="script.js"></script>
+
 </body>
 </html>
