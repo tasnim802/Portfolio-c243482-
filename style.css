@@ -731,3 +731,188 @@ footer a {
         padding: 20px;
     }
 }
+
+
+
+
+
+
+
+/* =================================
+   BEAUTIFUL DARK THEME
+================================= */
+
+body.dark-theme,
+body[data-theme="dark"],
+html[data-theme="dark"] {
+
+    --purple: #A78BFA;
+    --dark-purple: #111827;
+    --light-purple: #292B45;
+    --beige: #252B3A;
+    --cream: #171D2B;
+    --text: #E5E7EB;
+
+    --card-border: #343B50;
+
+    background: #171D2B;
+    color: var(--text);
+}
+
+/* Main Background */
+
+body.dark-theme,
+body[data-theme="dark"],
+html[data-theme="dark"] body {
+    background-color: #171D2B;
+    color: #E5E7EB;
+}
+
+/* Navbar and Footer */
+
+body.dark-theme .navbar,
+body.dark-theme footer,
+body[data-theme="dark"] .navbar,
+body[data-theme="dark"] footer {
+    background: #111827 !important;
+    border-bottom: 1px solid #343B50;
+}
+
+body.dark-theme .navbar .nav-link {
+    color: #D1D5DB;
+}
+
+body.dark-theme .navbar .nav-link:hover {
+    color: #A78BFA;
+}
+
+/* Headings and Paragraphs */
+
+body.dark-theme h1,
+body.dark-theme h2,
+body.dark-theme h3,
+body.dark-theme h4,
+body.dark-theme h5 {
+    color: #F3F4F6;
+}
+
+body.dark-theme p {
+    color: #C4CAD5;
+}
+
+body.dark-theme .eyebrow {
+    color: #A78BFA;
+}
+
+/* Cards */
+
+body.dark-theme .card,
+body.dark-theme .skill,
+body.dark-theme .activity,
+body.dark-theme .education-card,
+body.dark-theme .experience-card,
+body.dark-theme .project-card {
+    background: #222A3B;
+    border: 1px solid #343B50;
+    color: #E5E7EB;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.18);
+}
+
+/* Card Hover */
+
+body.dark-theme .card:hover,
+body.dark-theme .skill:hover,
+body.dark-theme .activity:hover,
+body.dark-theme .experience-card:hover {
+    border-color: #8B7ACB;
+    box-shadow: 0 8px 25px rgba(139, 122, 203, 0.12);
+}
+
+/* Buttons */
+
+body.dark-theme .btn-main {
+    background: #8B7ACB;
+    color: #FFFFFF;
+    border: none;
+}
+
+body.dark-theme .btn-main:hover {
+    background: #A78BFA;
+    color: #171D2B;
+}
+
+/* Links */
+
+body.dark-theme a {
+    color: #A78BFA;
+}
+
+body.dark-theme a:hover {
+    color: #C4B5FD;
+}
+
+/* Profile Image */
+
+body.dark-theme .profile-img {
+    border: 4px solid #8B7ACB;
+    box-shadow: 0 0 20px rgba(167, 139, 250, 0.15);
+}
+
+/* Experience Section */
+
+body.dark-theme .experience-icon {
+    background: #34304D;
+    color: #C4B5FD;
+}
+
+body.dark-theme .experience-content h3,
+body.dark-theme .experience-content h4 {
+    color: #F3F4F6;
+}
+
+body.dark-theme .experience-skills span {
+    background: #34304D;
+    color: #C4B5FD;
+}
+
+/* Contact Form */
+
+body.dark-theme input,
+body.dark-theme textarea,
+body.dark-theme select {
+    background: #222A3B;
+    color: #F3F4F6;
+    border: 1px solid #454D63;
+}
+
+body.dark-theme input::placeholder,
+body.dark-theme textarea::placeholder {
+    color: #9CA3AF;
+}
+
+body.dark-theme input:focus,
+body.dark-theme textarea:focus,
+body.dark-theme select:focus {
+    background: #222A3B;
+    color: #FFFFFF;
+    border-color: #A78BFA;
+    box-shadow: 0 0 0 3px rgba(167, 139, 250, 0.15);
+}
+
+/* Empty Messages */
+
+body.dark-theme .empty-note {
+    color: #9CA3AF;
+}
+
+/* Smooth Transition */
+
+body,
+body * {
+    transition:
+        background-color 0.25s ease,
+        color 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
